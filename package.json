@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "SET DEBUG=server:* & nodemon server.js",
-    "prod": "SET DEBUG=server:* & node server.js",
+    "prod": "$env:DEBUG=server:*;node server.js",
     "debug": "SET DEBUG=server:* & nodemon --inspect server.js"
   },
   "keywords": [],
