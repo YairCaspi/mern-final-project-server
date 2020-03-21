@@ -52,3 +52,7 @@ exports.addNewUser = (attr) => {
       });
    });
 }
+
+exports.deleteUser = (userId) => {
+   return Users.findByIdAndRemove(userId);
+}

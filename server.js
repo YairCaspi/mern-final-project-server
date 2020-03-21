@@ -12,6 +12,7 @@ const portListening = 770;
 //#region Routers:
 
 const routeUsers = require('./router/usersRouter');
+const routeTodos = require('./router/todosRouter');
 
 //#endregion
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/users', routeUsers);
+app.use('/todos', routeTodos);
 
 app.listen(portListening, () => {
    debug('start listening on port ' + portListening);
